@@ -1,13 +1,94 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  max-width: 1800px;
+  margin: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.card-title,
+a {
+  text-align: left;
+  font-size: 18px;
+  text-decoration: none;
+  color: rgba(100, 148, 237, 0.8);
+}
+
+a:hover {
+  color: rgba(100, 148, 237, 1);
+}
+
+span {
+  font-size: 14px;
+  color: grey;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  background-color: inherit;
+  flex-wrap: wrap;
+}
+
+.flex-container > .flex-wrapper {
+  background-color: #f1f1f1;
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.flex-children {
+  background-color: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+img:hover {
+  opacity: 0.9;
+}
+
+img,
+.card-container {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.card-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  flex: 1;
+  margin: 5px;
+  box-shadow: 10px 10px 5px rgba(128, 128, 128, 0.5);
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-body,
+.card-image {
+  text-align: center;
+}
+
+#pokemon .card-title,
+#pokemon .card-body {
+  background: aliceblue;
+}
+#pokemon .card-title {
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+}
+
+@media (min-width: 900px) {
+  .card-container {
+    max-width: 180px;
+    min-width: 150px;
+  }
+  .flex-container {
+    flex-wrap: nowrap;
+  }
+  .flex-container > .flex-wrapper {
+    width: 50%;
+  }
 }
